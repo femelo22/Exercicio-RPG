@@ -5,16 +5,16 @@ public class EstiloLuta {
 	private Personagem personagem;
 	
 	public static String ARMA_GUERREIRO = "Espada e escudo";
-	public static String ARMA_MAGO = "Mago";
-	public static String ARMA_SACERDOTE = "Sacerdote";
-	public static String ARMA_PALADINO = "Paladino";
-	public static String ARMA_ATIRADOR = "Atirador";
-	public static String ARMA_BARBARO = "Barbaro";
-	public static String ARMA_MERCENARIO = "Mercenario";
-	public static String ARMA_ARCANO = "Arcano";
-	public static String ARMA_LUTADOR = "Lutador";
-	public static String ARMA_CEIFEIRO = "Ceifeiro";
-	public static String ARMA_ESPADACHIM = "Espadachim";
+	public static String ARMA_MAGO = "Cajado Mágico";
+	public static String ARMA_SACERDOTE = "Cajado de cura";
+	public static String ARMA_PALADINO = "Arco e Flecha";
+	public static String ARMA_ATIRADOR = "Arma de fogo";
+	public static String ARMA_BARBARO = "Machado";
+	public static String ARMA_MERCENARIO = "Adagas";
+	public static String ARMA_ARCANO = "Espada Duplas";
+	public static String ARMA_LUTADOR = "Punho";
+	public static String ARMA_CEIFEIRO = "Foice Mágica";
+	public static String ARMA_ESPADACHIM = "Katanas";
 
 	public Personagem getPersonagem() {
 		return personagem;
@@ -25,10 +25,10 @@ public class EstiloLuta {
 	}
 	
 	
-	public String armaPersonagem() throws Exception {
+	public String armaPersonagem(Personagem personagem)  {
 		
 		if (personagem == null) {
-			throw new Exception("Personagem não pode ser nulo!");
+			throw new IllegalArgumentException("Personagem não pode ser nulo!");
 		}
 		
 		if(personagem.getClasse().equalsIgnoreCase(Personagem.GUERREIRO)) {
